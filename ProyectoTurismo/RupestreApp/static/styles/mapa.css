@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#map {
+    position: absolute;
+    top: 36px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+.map-text{
+    color: rgb(104, 105, 105);
+    position: absolute;
+    bottom:50px;
+    left:10px;
+    font-size: 30px;
+}
+
+
+
+/* .markerText {
+    position: absolute;
+    width:200px;
+ }   
+ .h3{
+   color: brown;
+   font-size: 30px;
+   }
+ .markerImg {
+    width:70px;
+    
+ }  */
+ /* quitamos atribución o datos de leaflet  */
+    
+.leaflet-control-attribution{
+     display: none;
+}
+ 
