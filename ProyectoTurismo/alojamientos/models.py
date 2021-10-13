@@ -22,6 +22,7 @@ class Alojamiento(models.Model):
     imagen=models.ImageField(upload_to='alojamientos')
     precio=models.IntegerField( null=True, blank=True)#opcional subir precio
     categorias=models.ManyToManyField(Categoria) #relación de muchos a muchos entre Categoria y Post
+    disponibilidad=models.BooleanField(default=True)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now_add=True)
 
@@ -30,7 +31,7 @@ class Alojamiento(models.Model):
         verbose_name_plural='alojamientos'
 
     def __str__(self):
-        return self.nombre  
+        return self.nombre
 
 # Modelo Post para manejar comentarios 
 class Post(models.Model):
