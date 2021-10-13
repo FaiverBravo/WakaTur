@@ -11,7 +11,7 @@
 		<div class="home">
 			<div class="home_background parallax-window" data-parallax="scroll" data-image-src="./RupestreApp/images/alojamientos/h.jpg"><!--<img src="{% static 'RupestreApp/images/alojamientos/h.jpg' %}">--></div>
 			<div class="home_content">
-				<div class="home_title">alojamientos</div>
+				<div class="home_title">alojamientos Detalle</div>
 			</div>
 		</div>	
 
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 		</div>
-
+		<span>TEst</span>
 	{% for alojamiento in alojamientos %}
 
 		<!-- Offers -->
@@ -83,7 +83,7 @@
 										<!-- Image by https://unsplash.com/@kensuarez -->
 										<div class="offers_image_background"
 										><img src= "{{alojamiento.imagen.url}}"></div>
-										<div class="offer_name"><a href="alojamiento_detalle/">{{alojamiento.nombre}}</a></div>
+										<div class="offer_name"><a href="/detalle_hotel">{{alojamiento.nombre}}</a></div>
 									</div>
 								</div>
 								<div class="col-lg-8">

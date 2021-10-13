@@ -16,6 +16,20 @@ def alojamientos(request):
         "posts": posts
         })
 
+def alojamiento_detalle(request):
+
+    # alojamientos=Alojamiento.objects.all()
+    # categorias=Categoria.objects.all()
+    # posts=Post.objects.all()
+    
+    # return render(request, "alojamientos/alojamientos.html", {
+    #     "alojamientos": alojamientos,
+    #     "categorias": categorias,
+    #     "posts": posts
+      #  })
+    return render(request, "alojamientos/alojamiento_detalle.html", {
+        
+    })
 
 def categoria(request, categoria_id):
 
