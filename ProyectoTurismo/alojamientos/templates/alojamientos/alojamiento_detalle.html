@@ -11,7 +11,7 @@
 		<div class="home">
 			<div class="home_background parallax-window" data-parallax="scroll" data-image-src="./RupestreApp/images/alojamientos/h.jpg"><!--<img src="{% static 'RupestreApp/images/alojamientos/h.jpg' %}">--></div>
 			<div class="home_content">
-				<div class="home_title">alojamientos Detalle</div>
+				<div class="home_title">{{alojamiento.nombre}}</div>
 			</div>
 		</div>	
 
@@ -60,8 +60,8 @@
 				</div>
 			</div>
 		</div>
-		<span>TEst</span>
-	{% for alojamiento in alojamientos %}
+		
+	
 
 		<!-- Offers -->
 
@@ -80,7 +80,6 @@
 								<div class="col-lg-1 temp_col"></div>
 								<div class="col-lg-3 col-1680-4">
 									<div class="offers_image_container">
-										<!-- Image by https://unsplash.com/@kensuarez -->
 										<div class="offers_image_background"
 										><img src= "{{alojamiento.imagen.url}}"></div>
 										<div class="offer_name"><a href="/detalle_hotel">{{alojamiento.nombre}}</a></div>
@@ -129,33 +128,6 @@
 		</div>
 	
 
-	{% endfor %}
-
-	
-	
-	<section>
-		<div style="width:75%; background-color: grey; margin:auto; text-align: left ; color: black;">
-			Comentarios:
-
-			{% for post in posts %}
-				{{post.autor}}
-				{{post.descripcion}}
-			{% endfor %}							
-		</div>
-	</section>
-	
-	
-	
-	<section>
-		<div style="width:75%; background-color: yellow; margin:auto; text-align: left ; color: black;">
-			Categorias:
-				
-			{% for categoria in categorias %}
-				{{categoria.nombre}}
-			{% endfor %}										
-		</div>
-	</section>
-	
 	
 					
 {% endblock %} 

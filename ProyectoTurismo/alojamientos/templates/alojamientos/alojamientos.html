@@ -135,11 +135,11 @@
 	
 	<section>
 		<div style="width:75%; background-color: grey; margin:auto; text-align: left ; color: black;">
-			Comentarios:
+			Comentarios: <div></div>
 
 			{% for post in posts %}
-				{{post.autor}}
-				{{post.descripcion}}
+				por: {{post.autor}}
+				dice: {{post.descripcion}}
 			{% endfor %}							
 		</div>
 	</section>
@@ -148,7 +148,7 @@
 	
 	<section>
 		<div style="width:75%; background-color: yellow; margin:auto; text-align: left ; color: black;">
-			Categorias:
+			Categorias:<div></div>
 				
 			{% for categoria in categorias %}
 				{{categoria.nombre}}
