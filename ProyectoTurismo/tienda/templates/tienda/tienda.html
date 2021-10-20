@@ -58,9 +58,22 @@
 		</div>
 	</div>
 </div>
+<!-- Tienda -->
 
+<div class="container">
+	<div class="row">
+{% for producto in productos %}
+		<div class="col-md-3">
 
-<!-- Offers -->
-<div><p style="color: rgb(53, 5, 5);">Estamos en la Tienda</p></div>
-
+			<div class="card" style="width: 250px; height: 350px; object-fit: cover; margin: 5px 5px;">
+				<img src="{{producto.imagen.url}}"class="card-img-top">
+				<div class="card-body" style="text-align: center;">
+					<h7 class="card-title">{{producto.nombre}}</h7>
+					<p class="card-text">$&nbsp;{{producto.precio}}</p>
+				</div>
+			</div>
+		</div>
+{% endfor %}
+	</div>
+</div>
 {% endblock %}
