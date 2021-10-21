@@ -5,64 +5,6 @@
 {% block content %}
 
 	
-
-	<!-- Home -->
-
-		<div class="home">
-			<div class="home_background parallax-window" data-parallax="scroll" data-image-src="./RupestreApp/images/alojamientos/h.jpg"><!--<img src="{% static 'RupestreApp/images/alojamientos/h.jpg' %}">--></div>
-			<div class="home_content">
-				<div class="home_title">{{alojamiento.nombre}}</div>
-			</div>
-		</div>	
-
-		<!-- Search -->
-
-		<div class="search">
-
-
-			<!-- Search Contents -->
-
-			<div class="container fill_height">
-				<div class="row fill_height">
-					<div class="col fill_height">
-
-						<!-- Search Tabs -->
-
-						<div class="search_tabs_container">
-							<div
-								class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div
-									class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-									<a class="link" href="{% url 'Alojamientos' %}"><img src="{% static 'RupestreApp/images/iconos/alojamientos.png' %} "
-											alt=""><span>alojamientos</span></a>
-								</div>
-								<div
-									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
-									<a class="link" href="{% url 'Experiencias' %}"><img src="{% static 'RupestreApp/images/iconos/turismo.png' %}" alt="">experiencias</a>
-								</div>
-								<div
-									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
-									<a class="link" href="{% url 'Gastronomia' %}"><img src="{% static 'RupestreApp/images/iconos/gastronomia.png' %}"
-											alt="">gastronomía</a>
-								</div>
-								<div
-									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
-									<a class="link" href="{% url 'Servicios' %}"><img src="{% static 'RupestreApp/images/iconos/servicios.png' %}"
-											alt="">servicios</a>
-								</div>
-								<div
-									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
-									<a class="link" href="{% url 'Tienda' %}"><img src="{% static 'RupestreApp/images/iconos/tiendas.png' %}" alt="">tiendas</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	
-
 		<!-- Offers -->
 
 		<div class="container">
@@ -100,10 +42,10 @@
 										
 										<div class="offers_icons">
 											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/post.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/compass.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/bicycle.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/sailboat.png' %}" alt="">
+												<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt="">
 												</li>
 											</ul>
 										</div>
