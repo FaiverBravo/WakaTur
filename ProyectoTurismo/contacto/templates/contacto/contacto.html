@@ -1,6 +1,8 @@
-{% extends "RupestreApp/base.html" %}
+{% extends "RupestreApp/base1.html" %}
 
 {% load static %}
+
+{% block title %}	Rupestre │ Contacto	{% endblock %}
 
 {% block content %}
 <!-- Home -->
@@ -8,7 +10,7 @@
 <div class="super_container">
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/inicio/atardecer1.jpg">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/inicio/atardecer1.jpg' %}">
 		</div>
 		<div class="home_content">
 			<div class="home_title">Contacto</div>
@@ -18,9 +20,9 @@
 	<!-- Contact -->
 <div>
 	{% if "valido" in request.GET %}
-
-		<p>Información enviada correctamente, gracias!</p>
-	
+		<div class="alert alert-success" role="alert">
+			<p>Información enviada correctamente, gracias!</p>
+	    </div>
 	{% endif %}
 
 	<form action="" method="post">
@@ -63,7 +65,7 @@
 					<!-- About - Image -->
 
 					<div class="about_image">
-						<img src="images/inicio/man.png" alt="">
+						<img src="{% static 'images/inicio/man.png' %}" alt="">
 					</div>
 
 				</div>
@@ -74,7 +76,7 @@
 
 					<div class="about_content">
 						<div class="logo_container about_logo">
-							<div class="logo"><a href="#"><img src="images/icono/logof.png" alt="">Rupestre</a></div>
+							<div class="logo"><a href="#"><img src="{% static 'images/iconos/logof.png' %}" alt="">Rupestre</a></div>
 						</div>
 						<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula iaculis consequat nisl. Nunc et suscipit urna pretium.</p>
 						
@@ -96,20 +98,20 @@
 					<div class="about_info">
 						<ul class="contact_info_list">
 							<li class="contact_info_item d-flex flex-row">
-								<div><div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div></div>
+								<div><div class="contact_info_icon"><img src="{% static 'images/iconos/placeholder.svg' %}" alt=""></div></div>
 								<div class="contact_info_text">Calle 4a # 19a - 17 San Agustín-Huila-COL</div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
-								<div><div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div></div>
+								<div><div class="contact_info_icon"><img src="{% static 'images/iconos/phone-call.svg' %}" alt=""></div></div>
 								<div class="contact_info_text">+57 3103409882</div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
-								<div><div class="contact_info_icon"><img src="images/message.svg" alt=""></div></div>
+								<div><div class="contact_info_icon"><img src="{% static 'images/iconos/message.svg' %}" alt=""></div></div>
 								<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">faivertkd@gmail.com</a></div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
-								<div><div class="contact_info_icon"><img src="images/planet-earth.svg" alt=""></div></div>
-								<div class="contact_info_text"><a href="https://colorlib.com">www.faiverbravo.github.io/locate/</a></div>
+								<div><div class="contact_info_icon"><img src="{% static 'images/iconos/planet-earth.svg' %}" alt=""></div></div>
+								<div class="contact_info_text"><a href="">www.faiverbravo.github.io/locate/</a></div>
 							</li>
 						</ul>
 					</div>

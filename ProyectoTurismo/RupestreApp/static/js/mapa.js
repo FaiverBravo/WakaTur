@@ -13,8 +13,8 @@ var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoom
 
 // Marker Turismo
 var turismoIcon = new L.Icon({
-    iconUrl: 'images/mapa/marker-icon-2x-green.png',
-    shadowUrl: 'images/mapa/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-green.png' ,
+    shadowUrl: 'images/mapa/marker-shadow.png' ,
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -23,7 +23,7 @@ var turismoIcon = new L.Icon({
 
 var turismo = L.layerGroup();
 
-L.marker([1.887648, -76.2949629],{icon: turismoIcon}).bindPopup('<div align="center"style= "heigth: 150px; width:200px"><h2>Parque arquelógico San Agustín</h2><img width="70%" height="70%"src="images/lavapatas.jpg"><p>informate <a href="https://faiverbravo.github.io/locate/">aca</a></p></div>').addTo(turismo),
+L.marker([1.887648, -76.2949629],{icon: turismoIcon}).bindPopup('<div align="center"style= "heigth: 150px; width:200px"><h2>Parque arquelógico San Agustín</h2><img width="70%" height="70%"src="images/alojamientos/h.jpg"><p>informate <a href="https://faiverbravo.github.io/locate/">aca</a></p></div>').addTo(turismo),
 L.marker([1.88724803,-76.29549695],{icon: turismoIcon}).bindPopup('<div align="center"style= "heigth: 150px; width:200px"><h2>Museo Arqueológico</h2><img width="70%" height="70%"src="images/lavapatas.jpg"><p>informate <a href="https://faiverbravo.github.io/locate/">aca</a></p></div>').addTo(turismo),
 L.marker([1.88663907,-76.29590293],{icon: turismoIcon}).bindPopup('<div align="center"style= "heigth: 150px; width:200px"><h2>Bosque de las Estatuas</h2><img width="70%" height="70%"src="images/lavapatas.jpg"><p>informate <a href="https://faiverbravo.github.io/locate/">aca</a></p></div>').addTo(turismo),
 L.marker([1.88303662, -76.2943809],{icon: turismoIcon}).bindPopup('<div align="center"style= "heigth: 150px; width:200px"><h2>Mesita A</h2><img width="70%" height="70%"src="images/lavapatas.jpg"><p>informate <a href="https://faiverbravo.github.io/locate/">aca</a></p></div>').addTo(turismo),
@@ -129,24 +129,24 @@ var geoIcon = new L.Icon({
     });
 
 //--Mostrar Mapa
-    var map = L.map('map', {
+    var mapa = L.mapa('mapa', {
         layers: [grayscale, turismo, alojamientos, gastronomia],
         scrollWheelZoom:false,
         });
 
     //--Geolocalización "Estas Aquí!"
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mapa);
 	
 	function buscarLocalizacion(e) {
-		L.marker(e.latlng,{icon: geoIcon}).bindPopup('<b>Estoy Aquí !</b>').addTo(map);
+		L.marker(e.latlng,{icon: geoIcon}).bindPopup('<b>Estoy Aquí !</b>').addTo(mapa);
 		}
 	
 	function errorLocalizacion(e) {
 		alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización. Prueba con Firefox ;-)");
 }
-	map.on('locationerror', errorLocalizacion);
-	map.on('locationfound', buscarLocalizacion);
-	map.locate({setView: true, maxZoom:15});
+	mapa.on('locationerror', errorLocalizacion);
+	mapa.on('locationfound', buscarLocalizacion);
+	mapa.locate({setView: true, maxZoom:15});
 	    
 //--Establecemos var capas base
 var baseLayers = {
@@ -167,28 +167,28 @@ var overlays = {
     "Tiendas": tiendas
 };
 
-L.control.layers(baseLayers, overlays).addTo(map);
+L.control.layers(baseLayers, overlays).addTo(mapa);
 
 //--mostrar escala y logo
 L.control.scale({
     metric:true,
     imperial:false,
     position:'topright',
-}).addTo(map);
+}).addTo(mapa);
 
 L.Control.Watermark=L.Control.extend({
-    onAdd:function(map){
+    onAdd:function(mapa){
         var img=L.DomUtil.create('img');
         img.src='images/milestone_1.png';
         img.style.width='40px';
         return img;
     },
-    onRemove:function(map){},
+    onRemove:function(mapa){},
 })
     L.control.watermark=function(opts){
         return new L.Control.Watermark({opts});
     }
-    L.control.watermark().addTo(map);
+    L.control.watermark().addTo(mapa);
 
 	
 

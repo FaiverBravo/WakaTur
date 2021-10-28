@@ -127,6 +127,8 @@ USE_TZ = True
 
 STATIC_URL = '/RupestreApp/static/'
 
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

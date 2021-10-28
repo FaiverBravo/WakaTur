@@ -1,13 +1,15 @@
-{% extends "RupestreApp/base.html" %}
+{% extends "RupestreApp/base2.html" %}
 
 {% load static %}
+
+{% block title %}	Rupestre │ Tienda	{% endblock %}
 
 {% block content %}
 
 <!-- Home -->
 
 <div class="home">
-	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/inicio/artesanias.jpg"></div>
+	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/inicio/artesanias.jpg' %}"></div>
 	<div class="home_content">
 		<div class="home_title">Tienda</div>
 	</div>
@@ -36,7 +38,7 @@
 						</div>
 						<div
 							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
-							<a class="link" href="{% url 'Experiencias' %}"><img src="{% static 'Rimages/iconos/turismo.png' %}" alt="">experiencias</a>
+							<a class="link" href="{% url 'Experiencias' %}"><img src="{% static 'images/iconos/turismo.png' %}" alt="">experiencias</a>
 						</div>
 						<div
 							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">

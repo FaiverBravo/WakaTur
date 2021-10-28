@@ -1,12 +1,14 @@
-{% extends "RupestreApp/base.html" %}
+{% extends "RupestreApp/base2.html" %}
 
 {% load static %}
+
+{% block title %}	Rupestre │ Experiencias	{% endblock %}
 
 {% block content %}
 <!-- Home -->
 <!-- "background-image:url(../static/RupestreApp/images/inicio/caballos.jpg)" -->
 <div class="home">
-	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'RupestreApp/images/experiencias/estrecho1m.jpg' %}"></div>
+	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/experiencias/estrecho1m.jpg' %}"></div>
 	<div class="home_content">
 		<div class="home_title">experiencias</div>
 	</div>

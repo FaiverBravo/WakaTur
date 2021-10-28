@@ -1,12 +1,12 @@
-{% extends "RupestreApp/base.html" %}
+{% extends "RupestreApp/base1.html" %}
 
 {% load static %}
-
+{% block title %}	Rupestre │ Nosotros	{% endblock %}
 {% block content %}
 	<!-- Home -->
 
 	<div class="home">
-		<div class=" static home_background parallax-window" data-parallax="scroll" data-image-src= "{% static 'images/nosotros/about_background.jpg' %}"></div>
+		<div class=" static home_background parallax-window" data-parallax="scroll" data-image-src= "{% static 'images/nosotros/nosotros_background.jpg' %}"></div>
 		<div class="home_content">
 			<div class="home_title">Sobre Nosotros</div>
 		</div>
@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<div class="intro_image"><img src="{% static 'images/nosotros/nosotros_background.jpg' %}" alt=""></div>
+					<div class="intro_image"><img src="{% static 'images/nosotros/intro.png' %}" alt=""></div>
 				</div>
 				<div class="col-lg-5">
 					<div class="intro_content">

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 # Modelo Categorias
 class Categoria(models.Model):
@@ -23,6 +24,12 @@ class Alojamiento(models.Model):
     precio=models.IntegerField( null=True, blank=True)#opcional subir precio
     categorias=models.ManyToManyField(Categoria) #relación de muchos a muchos entre Categoria y Post
     disponibilidad=models.BooleanField(default=True)
+    activo=models.BooleanField(default=True)# prendido o apagado
+    # Horario
+
+    abrir=models.TimeField(null=True)
+    cerrar=models.TimeField(null=True)
+    
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now_add=True)
 
