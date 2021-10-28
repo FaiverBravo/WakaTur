@@ -30,7 +30,7 @@ class Alojamiento(models.Model):
     abrir=models.TimeField(null=True)
     cerrar=models.TimeField(null=True)
     
-    created=models.DateTimeField(auto_now_add=True)
+    created=models.DateTimeField(auto_now_add=True, verbose_name='fecha de creación')
     updated=models.DateTimeField(auto_now_add=True)
 
     class Meta:

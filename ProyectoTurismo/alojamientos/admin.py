@@ -8,6 +8,9 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 class AlojamientoAdmin(admin.ModelAdmin):
     readonly_fields=('created', 'updated')
+    search_fields=("nombre",'created',) #buscar por nombre
+    list_filter=("created", 'categorias',) #filtro por fecha
+
 
 class PostAdmin(admin.ModelAdmin):
     readonly_fields=('created', 'updated')

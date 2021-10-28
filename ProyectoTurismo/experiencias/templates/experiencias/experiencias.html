@@ -150,34 +150,35 @@
 		</div>
 	</div>
 	{% for experiencia in experiencias %}
+	
+
 		<!-- Offers -->
 
 		<div class="container">
 			<div class="row">
-				
+
 				<div class="col-lg-12">
 					<!-- Offers Grid -->
-
+					
 					<div class="offers_grid">
 
 						<!-- Offers Item -->
-
+						
 						<div class="offers_item rating_4">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
 								<div class="col-lg-3 col-1680-4">
 									<div class="offers_image_container">
-										<!-- Image by https://unsplash.com/@kensuarez -->
-										<div class="offers_image_background"
-											
-											><img src= "{{experiencia.imagen.url}}"></div>
-										<div class="offer_name"><a href="/hoteles">{{experiencia.nombre}}</a></div>
+										<div class="offers_image_background" style="background-image:url({{experiencia.imagen.url}})"></div>
+										<div class="offer_name"><a href="experiencia_detalle/{{experiencia.id}}">{{experiencia.nombre}}</a></div>
+
+										
 									</div>
 								</div>
 								<div class="col-lg-8">
 									<div class="offers_content">
-										<div class="offers_price">$ {{experiencia.precio}}<span> la experiencia completa</span></div>
-										<div class="rating_r rating_r_4 offers_rating" data-rating="4">
+										<div class="offers_price">$ {{experiencia.precio}}<span> por persona</span></div>
+										<div class="rating_r rating_r_5 offers_rating" data-rating="4">
 											<i></i>
 											<i></i>
 											<i></i>
@@ -187,32 +188,50 @@
 										<p class="offers_text">{{experiencia.descripcion}}</p>
 										<div class="offers_icons">
 											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/post.png   ' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/compass.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/bicycle.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'RupestreApp/images/sailboat.pn' %} " alt="">
-												</li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/post.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/compass.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/bicycle.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/post.png' %}" alt=""></li>
 											</ul>
 										</div>
-										<div class="button book_button"><a
-												href="#">book<span></span><span></span><span></span></a></div>
+										<div class="button book_button"><a href="experiencia_detalle/{{experiencia.id}}">ver experiencia<span></span><span></span><span></span></a></div>
 										<div class="offer_reviews">
 											<div class="offer_reviews_content">
 												<div class="offer_reviews_title">very good</div>
 												<div class="offer_reviews_subtitle">100 reviews</div>
 											</div>
 											<div class="offer_reviews_rating text-center">8.1</div>
+											<p class="offers_text">Disponibilidad: {{experiencia.disponibilidad}}</p>
+											<p class="offers_text">Estado: {{experiencia.activo}}</p>
+											<p class="offers_text">Abre: {{experienciao.abrir}}</p>
+											<p class="offers_text">Cierra: {{experienciao.cerrar}}</p>
+											<p class="offers_text">Closed = {{experiencia.dd}}</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
-			</div>
-		</div>
 
+			</div>
+
+		</div>
 	</div>
+
 	{% endfor %}
-{% endblock %} 						
+
+	
+	<section>
+		<div style="width:75%; background-color: yellow; margin:auto; text-align: left ; color: black;">
+			Categorias:<div></div>
+				
+			{% for categoria in categorias %}
+				{{categoria.nombre}}
+			{% endfor %}										
+		</div>
+	</section>
+	
+</div>
+					
+{% endblock %}  						
