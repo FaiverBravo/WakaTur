@@ -63,9 +63,9 @@
 							</div>
 							<div class="user_box ml-auto ">
 								<div class="user_box ml-auto">
-									<div class="user_box_login user_box_link"><a href="../../admin/" data-whatever="@mdo">Regístrate</a></div>
+									<div class="user_box_login user_box_link"><a href=""  data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Regístrate</a></div>
 									<div class="user_box_login user_box_link"><a href="../../admin/" data-whatever="@mdo">inicia sesión</a></div>
-									<div class="user_box_register user_box_link"><a href="../../admin/" data-whatever="@mdo">Hazte anfitrión</a></div>
+									<div class="user_box_register user_box_link"><a href=""  data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Hazte anfitrión</a></div>
 								</div>
 							</div>
 						</div>
@@ -252,7 +252,7 @@
 	</div>
 	
 	<!-- Formulario de registro -->
-<!--<div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -263,8 +263,11 @@
 	<h5 class="col-form-label text-center">Te damos la bienvenida a Rupestre</h5>
       
       <div class="modal-body">
-        <form>
-          <div class="form-group">
+        <form action="" class="loginUsuario" method="post">
+
+			{% csrf_token %}
+			{{form}}
+          <!-- <div class="form-group">
             <input type="text" class="form-control" id="nombre" placeholder="Nombres completos">
           </div>
 		      <div class="form-group">
@@ -275,22 +278,22 @@
           </div>
           <div class="form-group">
             <input type="password" class="form-control" id="confirm_password" placeholder="Confirmar contraseña">
-          </div>
+          </div> -->
         </form>
       </div>
       <div class="modal-footer">
-		<button type="button" id="form_submit_button" class="form_submit_button button btn-block" style="margin-top: 0; margin-bottom:10px;">Registrarse</button>
+		<button type="submit" id="form_submit_button" class="form_submit_button button btn-block" style="margin-top: 0; margin-bottom:10px;">Registrarse</button>
 		<button type="button" id="form_cerrar" class="form_submit_button button " style="margin-top: 0; margin-bottom:10px;" data-dismiss="modal">Cerrar</button>
 			
 	</div>
-
+{{mensaje}}
     </div>
   </div>
-</div> -->
+</div> 
 
 <!-- Formulario de inicio de sesión -->
 
-<!-- <div class="modal fade" id="modalEntrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalEntrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-header">
@@ -318,7 +321,7 @@
 		             
 		     </div>
 		</div>
-	</div> -->
+	</div> 
   </div>
   
 

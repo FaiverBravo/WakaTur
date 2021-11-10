@@ -17,11 +17,21 @@ class Categoria(models.Model):
         return self.nombre  
 
 # Modelo Alojamientos
+
+# opciones_alojamiento = [
+#     [0, "Hoteles"],
+#     [1, "Cabañas"],
+#     [2, "Hostales"],
+#     [3, "Camping"],
+#     [4, "Glamping"],
+#     [5, "Apartamentos y casas"]
+# ]
 class Alojamiento(models.Model):
     nombre=models.CharField(max_length=50)
     descripcion=models.CharField(max_length=150)
     imagen=models.ImageField(upload_to='alojamientos')
     precio=models.IntegerField( null=True, blank=True)#opcional subir precio
+    #tipo_alojamiento=models.IntegerField(choices=opciones_alojamiento)
     categorias=models.ManyToManyField(Categoria) #relación de muchos a muchos entre Categoria y Post
     disponibilidad=models.BooleanField(default=True)
     activo=models.BooleanField(default=True)# prendido o apagado

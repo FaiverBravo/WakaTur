@@ -50,9 +50,9 @@
 								</div>
 							{% endif %}
 							
-							<form action="" method="post" id="contact_form" class="contact_form text-center">
+							
 								{% csrf_token %}
-								<table class="contact_form_name input_field">{{miFormulario.as_table}}</table>
+								<table type="text" id="contact_form_name"class="contact_form_name input_field ">{{miFormulario.as_table}}</table>
 								
 							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200" >enviar mensaje<span></span><span></span><span></span></button>
 							</form>
