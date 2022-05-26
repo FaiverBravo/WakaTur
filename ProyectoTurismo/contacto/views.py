@@ -19,7 +19,7 @@ def contacto(request):
 
 
             email=EmailMessage("Mensaje desde App Rupestre", 
-            "El usuario con nombre {} con la dirección {} escribe lo siguiente:\n\nAsunto -->{}\n\nContenido -->{}".format(nombre, email, asunto, mensaje),
+            "El usuario con nombre {} con la dirección {} escribe lo siguiente:\n\nAsunto : {}\n\nContenido : {}".format(nombre, email, asunto, mensaje),
             "",["faivertkd@gmail.com"], reply_to=[email])
             try:
                 email.send()

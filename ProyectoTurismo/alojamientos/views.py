@@ -13,14 +13,10 @@ def alojamientos(request):
      # calcular si está cerrado
     
 
-   
-
-    
     return render(request, "alojamientos/alojamientos.html", {
         "alojamientos": alojamientos,
         "categorias": categorias,
-        "posts": posts,
-        
+        "posts": posts     
         
         })
 

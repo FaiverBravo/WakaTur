@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 from .forms import loginUsuario
 
-
+from django.contrib.auth.models import User
 # Create your views here.
 
 def index(request):
@@ -29,12 +29,28 @@ def mapa(request):
 
     return render(request, "RupestreApp/mapa.html")
 
+def registro(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        email='faiver@gmail.com'
 
-# API Formulario para contacto
+        User.objects.create_user(username, email, password)
+        
+        return render(request, "RupestreApp/autenticacion/registro.html", {
+            'username':username,
+            'password':password
+            })
 
+    return render(request, "RupestreApp/autenticacion/registro.html", {
+            })
 
+def login(request):
 
+    return render(request, "RupestreApp/autenticacion/login.html")
 
+def home(request):
 
+    return render(request, "RupestreApp/home.html")
 
     

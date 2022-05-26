@@ -13,9 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from re import template
+from unicodedata import name
 from django.contrib import admin
 from django.urls import path, include
-
+from django.views.generic.base import TemplateView #new
+from RupestreApp import views
 
 
 urlpatterns = [
@@ -30,4 +33,8 @@ urlpatterns = [
     path('servicios/', include('servicios.urls')),
     path('tienda/', include('tienda.urls')),
     path('contacto/', include('contacto.urls')),
+    path('login/',views.login, name='login'),
+    path('accounts/', include('django.contrib.auth.urls')),  # new
+    path('', TemplateView.as_view(template_name='home.html'), name='home'), #new
+   
 ]
