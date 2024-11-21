@@ -18,7 +18,7 @@
 	</div>
 	
 	<!-- Contact -->
-<!-- <div>
+<div>
 	{% if "valido" in request.GET %}
 		<div class="alert alert-success" role="alert">
 			<p>Información enviada correctamente, gracias!</p>
@@ -31,25 +31,25 @@
 		<input type="submit" value="Enviar" style="width: 150px;">
 	</form>
 	
-</div> -->
+</div>
 
-
+<!--
 	<div class="contact_form_section">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-
+--> 
 					
 					<!-- Contact Form -->
-					<div class="contact_form_container">
+<!--<div>
+						iv class="contact_form_container">
 						<div class="contact_title text-center">Pongase en contacto</div>
-						<div>
 							{% if "valido" in request.GET %}
 								<div class="alert alert-success" role="alert">
 									<p>Información enviada correctamente, gracias!</p>
 								</div>
-							{% endif %}
-							
+						
+								{% endif %}
 							
 								{% csrf_token %}
 								<table type="text" id="contact_form_name"class="contact_form_name input_field ">{{miFormulario.as_table}}</table>
@@ -69,9 +69,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-
+--->
 					<!-- Contact Form -->
-					<div class="contact_form_container">
+<!--					<div class="contact_form_container">
 						<div class="contact_title text-center">Pongase en contacto</div>
 						<form action="#" id="contact_form" class="contact_form text-center">
 							<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Nombre" required="required" data-error="Name is required.">
@@ -88,13 +88,14 @@
 	</div>
 
 	<!-- About -->
-	<div class="about">
+<!-- 	<div class="about">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5">
-					
+	-->				
+	
 					<!-- About - Image -->
-
+<!--
 					<div class="about_image">
 						<img src="{% static 'images/inicio/man.png' %}" alt="">
 					</div>
@@ -102,9 +103,9 @@
 				</div>
 
 				<div class="col-lg-4">
-					
+	-->				
 					<!-- About - Content -->
-
+<!--
 					<div class="about_content">
 						<div class="logo_container about_logo">
 							<div class="logo"><a href="#"><img src="{% static 'images/iconos/logof.png' %}" alt="">Rupestre</a></div>
@@ -123,9 +124,9 @@
 				</div>
 
 				<div class="col-lg-3">
-					
+-->					
 					<!-- About Info -->
-
+<!-- 
 					<div class="about_info">
 						<ul class="contact_info_list">
 							<li class="contact_info_item d-flex flex-row">
@@ -152,4 +153,5 @@
 			</div>
 		</div>
 	</div>
+-->
 {% endblock %} 

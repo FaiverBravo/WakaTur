@@ -1,25 +1,13 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
-from .forms import loginUsuario
-
-from django.contrib.auth.models import User
 # Create your views here.
+
 
 def index(request):
 
-# login de ususario
-    data={
-            'form': loginUsuario()
-        }
-    if request.method =='POST':
-        formulario = loginUsuario(data=request.POST)
-        if formulario.is_valid():
-            formulario.save()
-            data["mensaje"] = "Usuario registrado satisfactoriamente!"
-        else:
-            data["form"] = formulario
-
-    return render(request, "RupestreApp/index.html", data)
+    return render(request, "RupestreApp/index.html")
 
 def nosotros(request):
 
@@ -30,24 +18,37 @@ def mapa(request):
     return render(request, "RupestreApp/mapa.html")
 
 def registro(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        email='faiver@gmail.com'
-
-        User.objects.create_user(username, email, password)
+    # if request.method == 'POST':
+    #     form =UserCreationForm(request.POST)
+    #     if form.is_valid():
+    #         username = form.cleaned_data['username']        
+    #         messages.succes(request,f'Usuario {username} creado')
+    #         return redirect('home')
+    # else:
+    #     form= UserCreationForm()
         
-        return render(request, "RupestreApp/autenticacion/registro.html", {
-            'username':username,
-            'password':password
-            })
+    # context = {'form': form}
+    return render(request, "RupestreApp/authentication/registro.html" )
 
-    return render(request, "RupestreApp/autenticacion/registro.html", {
-            })
 
-def login(request):
+def login_user(request):
+# login de ususario
+    
+    if request.method =='POST':
+        username = request.POST['username'] 
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+            ...
+        else:
+            messages.success(request, ("There Was Error Logging In, Try Again..."))
+            return redirect('login')
+            ...
 
-    return render(request, "RupestreApp/autenticacion/login.html")
+    else:
+        return render(request, "RupestreApp/authentication/login.html")
 
 def home(request):
 

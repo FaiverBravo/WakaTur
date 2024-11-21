@@ -141,13 +141,21 @@
 
 			</div>
 		</div>
-
+				
+		{% block content %}
+		
+		
+		{% endblock %}
+		
 		<!-- Contenido cambiante  -->
 
-{% block content %}
-
-
-{% endblock %}
+		{% if messages %}
+			{% for message in messages %}
+				<div class="notification {{message.tags}}">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endif %}		
 
 
 		<!-- Footer -->

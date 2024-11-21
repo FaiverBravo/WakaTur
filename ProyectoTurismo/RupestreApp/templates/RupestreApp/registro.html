@@ -1,0 +1,17 @@
+{% extends "RupestreApp/base2.html" %}
+
+{% load static %}
+{% block title %}	Rupestre │ Registro	{% endblock %}]
+{% block content %}
+
+<!-- Home -->
+
+<form class="form"  method="post">
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+    {% csrf_token %}
+    {{ form.as_p }}
+  <button type="submit" id="Registrarse">Registrarse</button>
+</form>
+
+
+{% endblock %} 
