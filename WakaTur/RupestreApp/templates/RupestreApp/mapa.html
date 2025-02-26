@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="{% static 'css/mapa.css' %}">	
 
 <section style="width: 100%; height: 100vh;">
-    <div id="mapa" style="width: 100%; height: 100%;"></div>
-    <button id="backToHome" style="position: absolute; top: 140px; left: 5px; z-index: 1000;">Inicio</button>
+    <div id="mapa" style="width: 100%; height: 100%;"></div>    
 </section>
 
 <!-- Pasar las Rutas Estáticas al Archivo JavaScript -->
@@ -35,8 +34,7 @@
         logofImage: "{% static 'images/iconos/logof.svg' %}",
         logofbravoImage: "{% static 'images/iconos/logofbravo.png' %}",
     };
-
-    var homeUrl = "{% url 'Inicio' %}";
+    
 </script>
 
 <!-- Llamado al Archivo JavaScript -->  

@@ -228,8 +228,3 @@ L.control.watermark = function(opts) {
 }
 L.control.watermark().addTo(mapa);
 
-// Añadir botón de inicio al mapa
-document.getElementById('backToHome').addEventListener('click', function() {
-    window.location.href = homeUrl;
-});
-
