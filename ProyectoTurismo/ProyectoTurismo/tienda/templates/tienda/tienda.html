@@ -1,0 +1,81 @@
+{% extends "RupestreApp/base2.html" %}
+
+{% load static %}
+
+{% block title %}	Rupestre │ Tienda	{% endblock %}
+
+{% block content %}
+
+<!-- Home -->
+
+<div class="home">
+	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/inicio/artesanias.jpg' %}"></div>
+	<div class="home_content">
+		<div class="home_title">Tienda</div>
+	</div>
+</div>
+
+<!-- Search -->
+
+<div class="search">
+
+
+	<!-- Search Contents -->
+
+	<div class="container fill_height">
+		<div class="row fill_height">
+			<div class="col fill_height">
+
+				<!-- Search Tabs -->
+
+				<div class="search_tabs_container">
+					<div
+						class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+							<a class="link" href="{% url 'Alojamientos' %}"><img src="{% static 'images/iconos/alojamientos.png' %} "
+									alt=""><span>alojamientos</span></a>
+						</div>
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Experiencias' %}"><img src="{% static 'images/iconos/turismo.png' %}" alt="">experiencias</a>
+						</div>
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Gastronomia' %}"><img src="{% static 'images/iconos/gastronomia.png' %}"
+									alt="">gastronomía</a>
+						</div>
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Servicios' %}"><img src="{% static 'images/iconos/servicios.png' %}"
+									alt="">servicios</a>
+						</div>
+						<div
+							class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Tienda' %}"><img src="{% static 'images/iconos/tiendas.png' %}" alt="">tiendas</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Tienda -->
+
+<div class="container">
+	<div class="row">
+{% for producto in productos %}
+		<div class="col-md-3">
+
+			<div class="card" style="width: 250px; height: 350px; object-fit: cover; margin: 5px 5px;">
+				<img src="{{producto.imagen.url}}"class="card-img-top">
+				<div class="card-body" style="text-align: center;">
+					<h7 class="card-title">{{producto.nombre}}</h7>
+					<p class="card-text">$&nbsp;{{producto.precio}}</p>
+				</div>
+			</div>
+		</div>
+{% endfor %}
+	</div>
+</div>
+{% endblock %}

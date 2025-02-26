@@ -15,9 +15,9 @@ Including another URLconf
 """
 from re import template
 from unicodedata import name
-from django.contrib import admin
+from django.contrib import  admin
 from django.urls import path, include
-from RupestreApp import views
+
 
 
 urlpatterns = [
@@ -33,8 +33,9 @@ urlpatterns = [
     path('tienda/', include('tienda.urls')),
     path('contacto/', include('contacto.urls')),
     
-    path('PupestreApp/', include('django.contrib.auth.urls')), 
-    path('PupestreApp/', include('RupestreApp.urls')), 
+    path('RupestreApp/', include('django.contrib.auth.urls')), 
+    path('RupestreApp/', include('RupestreApp.urls')), 
+
     
    
 ]

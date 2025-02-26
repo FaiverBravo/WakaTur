@@ -1,0 +1,237 @@
+{% extends "RupestreApp/base2.html" %}
+
+{% load static %}
+
+{% block title %}	Rupestre │ Experiencias	{% endblock %}
+
+{% block content %}
+<!-- Home -->
+<!-- "background-image:url(../static/RupestreApp/images/inicio/caballos.jpg)" -->
+<div class="home">
+	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/experiencias/estrecho1m.jpg' %}"></div>
+	<div class="home_content">
+		<div class="home_title">experiencias</div>
+	</div>
+</div>
+
+<!-- Search -->
+
+<div class="search">
+
+
+	<!-- Search Contents -->
+
+	<div class="container fill_height">
+		<div class="row fill_height">
+			<div class="col fill_height">
+
+				<!-- Search Tabs -->
+
+				<div class="search_tabs_container">
+					<div
+						class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+							<a class="link" href="{% url 'Alojamientos' %}"><img src="{% static 'images/iconos/alojamientos.png' %} "
+									alt=""><span>alojamientos</span></a>
+						</div>
+						<div
+							class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Experiencias' %}"><img src="{% static 'images/iconos/turismo.png' %}" alt="">experiencias</a>
+						</div>
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Gastronomia' %}"><img src="{% static 'images/iconos/gastronomia.png' %}"
+									alt="">gastronomía</a>
+						</div>
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Servicios' %}"><img src="{% static 'images/iconos/servicios.png' %}"
+									alt="">servicios</a>
+						</div>
+						<div
+							class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start text-decoration:none">
+							<a class="link" href="{% url 'Tienda' %}"><img src="{% static 'images/iconos/tiendas.png' %}" alt="">tiendas</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Offers -->
+
+<div class="offers">
+
+	<!-- Search -->
+
+	<div class="search">
+		<div class="search_inner">
+
+			<!-- Search Contents -->
+
+			<div class="container fill_height no-padding">
+				<div class="row fill_height no-margin">
+					<div class="col fill_height no-padding">
+
+						<!-- Search Tabs -->
+
+
+						<!-- Search Panel -->
+
+						<div class="row">
+							<div class="col-lg-1 temp_col"></div>
+							<div class="col-lg-11">
+
+								<!-- Offers Sorting -->
+								<div class="offers_sorting_container">
+									<ul class="offers_sorting">
+										<li>
+											<span class="sorting_text">precio</span>
+											<i class="fa fa-chevron-down"></i>
+											<ul>
+												<li class="sort_btn"
+													data-isotope-option='{ "sortBy": "original-order" }'
+													data-parent=".price_sorting"><span>show all</span></li>
+												<li class="sort_btn" data-isotope-option='{ "sortBy": "price" }'
+													data-parent=".price_sorting"><span>ascending</span></li>
+											</ul>
+										</li>
+										<li>
+											<span class="sorting_text">ubicación</span>
+											<i class="fa fa-chevron-down"></i>
+											<ul>
+												<li class="sort_btn"
+													data-isotope-option='{ "sortBy": "original-order" }'>
+													<span>default</span></li>
+												<li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'>
+													<span>alphabetical</span></li>
+											</ul>
+										</li>
+										<li>
+											<span class="sorting_text">estrellas</span>
+											<i class="fa fa-chevron-down"></i>
+											<ul>
+												<li class="filter_btn" data-filter="*"><span>show all</span></li>
+												<li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'>
+													<span>ascending</span></li>
+												<li class="filter_btn" data-filter=".rating_3"><span>3</span></li>
+												<li class="filter_btn" data-filter=".rating_4"><span>4</span></li>
+												<li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
+											</ul>
+										</li>
+										<li class="distance_item">
+											<span class="sorting_text">distancia del centro</span>
+											<i class="fa fa-chevron-down"></i>
+											<ul>
+												<li class="num_sorting_btn"><span>distance</span></li>
+												<li class="num_sorting_btn"><span>distance</span></li>
+												<li class="num_sorting_btn"><span>distance</span></li>
+											</ul>
+										</li>
+										<li>
+											<span class="sorting_text">comentarios</span>
+											<i class="fa fa-chevron-down"></i>
+											<ul>
+												<li class="num_sorting_btn"><span>review</span></li>
+												<li class="num_sorting_btn"><span>review</span></li>
+												<li class="num_sorting_btn"><span>review</span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% for experiencia in experiencias %}
+	
+
+		<!-- Offers -->
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-12">
+					<!-- Offers Grid -->
+					
+					<div class="offers_grid">
+
+						<!-- Offers Item -->
+						
+						<div class="offers_item rating_4">
+							<div class="row">
+								<div class="col-lg-1 temp_col"></div>
+								<div class="col-lg-3 col-1680-4">
+									<div class="offers_image_container">
+										<div class="offers_image_background" style="background-image:url({{experiencia.imagen.url}})"></div>
+										<div class="offer_name"><a href="experiencia_detalle/{{experiencia.id}}">{{experiencia.nombre}}</a></div>
+
+										
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<div class="offers_content">
+										<div class="offers_price">$ {{experiencia.precio}}<span> por persona</span></div>
+										<div class="rating_r rating_r_5 offers_rating" data-rating="4">
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+										</div>
+										<p class="offers_text">{{experiencia.descripcion}}</p>
+										<div class="offers_icons">
+											<ul class="offers_icons_list">
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/post.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/compass.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/bicycle.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/iconos/post.png' %}" alt=""></li>
+											</ul>
+										</div>
+										<div class="button book_button"><a href="experiencia_detalle/{{experiencia.id}}">ver experiencia<span></span><span></span><span></span></a></div>
+										<div class="offer_reviews">
+											<div class="offer_reviews_content">
+												<div class="offer_reviews_title">very good</div>
+												<div class="offer_reviews_subtitle">100 reviews</div>
+											</div>
+											<div class="offer_reviews_rating text-center">8.1</div>
+											<p class="offers_text">Disponibilidad: {{experiencia.disponibilidad}}</p>
+											<p class="offers_text">Estado: {{experiencia.activo}}</p>
+											<p class="offers_text">Abre: {{experienciao.abrir}}</p>
+											<p class="offers_text">Cierra: {{experienciao.cerrar}}</p>
+											<p class="offers_text">Closed = {{experiencia.dd}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	{% endfor %}
+
+	
+	<section>
+		<div style="width:75%; background-color: yellow; margin:auto; text-align: left ; color: black;">
+			Categorias:<div></div>
+				
+			{% for categoria in categorias %}
+				{{categoria.nombre}}
+			{% endfor %}										
+		</div>
+	</section>
+	
+</div>
+					
+{% endblock %}  						

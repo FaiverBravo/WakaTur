@@ -131,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/RupestreApp/static/'
 LOGIN_REDIRECT_URL = '/home'
-LOGOUT_REDIRECT_URL = '/home' #add at the end , and change both '/' to 'index'
+LOGOUT_REDIRECT_URL = '/RupestreApp' #add at the end , and change both '/' to 'index'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

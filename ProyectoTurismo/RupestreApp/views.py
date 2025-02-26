@@ -13,8 +13,9 @@ def nosotros(request):
 
     return render(request, "RupestreApp/nosotros.html")
 
-def mapa(request):
 
+def mapa(request):
+    
     return render(request, "RupestreApp/mapa.html")
 
 def registro(request):
@@ -43,7 +44,7 @@ def login_user(request):
             return redirect('home')
             ...
         else:
-            messages.success(request, ("There Was Error Logging In, Try Again..."))
+            messages.success(request, ("Hubo un error al iniciar sesión, inténtelo nuevamente..."))
             return redirect('login')
             ...
 
