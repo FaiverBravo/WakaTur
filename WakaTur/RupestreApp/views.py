@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
+
 # Create your views here.
 
 
@@ -18,6 +19,9 @@ def mapa(request):
     return render(request, "RupestreApp/mapa.html")
 
 def registro(request):
+
+
+  
     # if request.method == 'POST':
     #     form =UserCreationForm(request.POST)
     #     if form.is_valid():

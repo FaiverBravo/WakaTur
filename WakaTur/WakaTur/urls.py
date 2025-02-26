@@ -17,15 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from django_distill import distill_path
-from RupestreApp import views
-
-def get_index():
-    return None
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    distill_path('', views.index, name='index', distill_func=get_index),
+    
     # Enlace de URLs entre Proyecto principal con App RupestreApp
     path('', include('RupestreApp.urls')),
     path('alojamientos/', include('alojamientos.urls')),
