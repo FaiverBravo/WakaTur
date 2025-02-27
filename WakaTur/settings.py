@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'RupestreApp',
+    'WakaTurApp',
     'alojamientos',
     'experiencias',
     'gastronomia',
@@ -129,9 +129,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/RupestreApp/static/'
+STATIC_URL = '/WakaTurApp/static/'
 LOGIN_REDIRECT_URL = '/home'
-LOGOUT_REDIRECT_URL = '/RupestreApp' #add at the end , and change both '/' to 'index'
+LOGOUT_REDIRECT_URL = '/WakaTurApp' #add at the end , and change both '/' to 'index'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

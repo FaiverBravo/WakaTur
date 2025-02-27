@@ -23,8 +23,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    #enlace de urls entre Proyecto principal con App RupestreApp
-    path('', include('RupestreApp.urls')),
+    #enlace de urls entre Proyecto principal con App WakaTurApp
+    path('', include('WakaTurApp.urls')),
     
     path('alojamientos/', include('alojamientos.urls')),
     path('experiencias/', include('experiencias.urls')),
@@ -33,8 +33,8 @@ urlpatterns = [
     path('tienda/', include('tienda.urls')),
     path('contacto/', include('contacto.urls')),
     
-    path('RupestreApp/', include('django.contrib.auth.urls')), 
-    path('RupestreApp/', include('RupestreApp.urls')), 
+    path('WakaTurApp/', include('django.contrib.auth.urls')), 
+    path('WakaTurApp/', include('WakaTurApp.urls')), 
 
     
    
