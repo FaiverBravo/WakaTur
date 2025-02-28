@@ -1089,8 +1089,8 @@ section
     -ms-appearance:none;
     -o-appearance:none;
     appearance:none;
-	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-	-webkit-user-select: none;
+	/*-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);*/
+	/*-webkit-user-select: none;*/
 	background-image: url(../images/dropdown.png);
 	background-position: center right;
 	background-repeat: no-repeat;
