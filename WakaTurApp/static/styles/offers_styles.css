@@ -914,12 +914,16 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.search_tab:not(:first-child):not(:nth-child(2))
+/*Color de link para menu*/
+.link { color: #2d2c2c; } /* CSS link color */
+.link:hover { color: #FFFFFF; } /* CSS link hover */
+
+ .search_tab:not(:first-child):not(:nth-child(2))
 {
 	border: solid 1px #ededed;
 	margin-right: -1px;
 	margin-bottom: -1px;
-}
+} 
 .search_tab img
 {
 	margin-right: 10px;
